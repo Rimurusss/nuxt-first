@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .bgcc {
+            background-color: beige;
+            background: rgba(244, 247, 244, 0.3);
+        }
+
+        .main {
+            text-align: center;
+            border: 3px solid rgb(248, 0, 0);
+        }
+
+        img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 400px;
+            height: 250px;
+        }
+
+        body {
+            background-image: url("https://images2.alphacoders.com/743/743487.jpg");
+            background-size: cover;
+        }
+
+        h2 {
+            color: rgb(255, 0, 200);
+        }
+
+        .inin {
+            color: blue;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            color: #eee;
+        }
+
+        .container {
+            /* height: 100vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container p {
+            font-size: 3rem;
+            padding: 0.5rem;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container p span.typed-text {
+            font-weight: normal;
+            color: #dd7732;
+        }
+
+        .container p span.cursor {
+            display: inline-block;
+            background-color: #ccc;
+            margin-left: 0.1rem;
+            width: 3px;
+            animation: blink 1s infinite;
+        }
+
+        .container p span.cursor.typing {
+            animation: none;
+        }
+
+        @keyframes blink {
+            0% {
+                background-color: #ccc;
+            }
+
+            49% {
+                background-color: #ccc;
+            }
+
+            50% {
+                background-color: transparent;
+            }
+
+            99% {
+                background-color: transparent;
+            }
+
+            100% {
+                background-color: #ccc;
+            }
+        }
+    </style>
+    <div class="bgcc">
+        <div class="main">
+            <h1>HELLO CAT</h1>
+            <img id="mainPhoto">
+            <div class="container">
+                <p>CAT = <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+            </div>
+            <h2>meow meow meow</h2>
+            <h2>meow meow meow</h2>
+            <h2 class="inin">meow meow meow</h2>
+            <h2 class="inin">meow meow meow</h2>
+            <h2>meow meow meow</h2>
+
+            Num1<input id="num1" type="number"><br>
+            Num2<input id="num2" type="number"><br>
+            <button onclick="plus()" >  +  </button>
+            <button onclick="deletee()" >  -  </button>
+            <button onclick="multiply()" >  *  </button>
+            <button onclick="divide()" >   /  </button>
+            
+            <h1>result: </h1><h1 id="result">   </h1>
+            
+        </div>
+    
+    </div>
+    <script>
+        function plus(){
+           var result = (document.getElementById("num1").value * 1) + (document.getElementById("num2").value * 1);
+            document.getElementById("result").innerHTML = result;
+        }
+        function deletee(){
+           var result = (document.getElementById("num1").value * 1) - (document.getElementById("num2").value * 1);
+            document.getElementById("result").innerHTML = result;
+        }
+        function multiply(){
+           var result = (document.getElementById("num1").value * 1) * (document.getElementById("num2").value * 1);
+            document.getElementById("result").innerHTML = result;
+        }
+        function divide(){
+           var result = (document.getElementById("num1").value * 1) / (document.getElementById("num2").value * 1);
+            document.getElementById("result").innerHTML = result;
+        }
+
+
+        var images = [];
+
+        images[0] = ['https://static.wixstatic.com/media/c6a3da_e9d3a888139647b9863b25fddc43c966~mv2.jpg/v1/fill/w_740,h_491,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c6a3da_e9d3a888139647b9863b25fddc43c966~mv2.jpg'];
+        images[1] = ['https://static.wixstatic.com/media/c6a3da_d04ae703bc86416aaaa0c0b094f77038~mv2.jpg/v1/fill/w_740,h_494,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c6a3da_d04ae703bc86416aaaa0c0b094f77038~mv2.jpg'];
+        images[2] = ['https://static.wixstatic.com/media/c6a3da_371894b70019463a89f91078c7b062d7~mv2.jpg/v1/fill/w_740,h_493,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c6a3da_371894b70019463a89f91078c7b062d7~mv2.jpg'];
+        images[3] = ['https://static.wixstatic.com/media/c6a3da_bbf6adaecf20466aa356abf25c5965cd~mv2.jpg/v1/fill/w_740,h_492,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c6a3da_bbf6adaecf20466aa356abf25c5965cd~mv2.jpg'];
+        images[4] = ['https://static.wixstatic.com/media/c6a3da_8343f7baaf5e48f39664bb9aaa21987d~mv2.jpg/v1/fill/w_740,h_493,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c6a3da_8343f7baaf5e48f39664bb9aaa21987d~mv2.jpg'];
+        images[5] = ['https://static.wixstatic.com/media/c6a3da_0fb1eba4b78e42fdb00e23016682c840~mv2.jpg/v1/fill/w_740,h_555,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c6a3da_0fb1eba4b78e42fdb00e23016682c840~mv2.jpg'];
+
+        var index = 0;
+
+        function change() {
+            document.getElementById("mainPhoto").src = images[index];
+            if (index == 5) {
+                index = 0;
+            } else {
+                index++;
+            }
+
+            setTimeout(change, 7000);
+        }
+
+        window.onload = change();
+
+
+        const typedTextSpan = document.querySelector(".typed-text");
+        const cursorSpan = document.querySelector(".cursor");
+
+        const textArray = ["Persian", "Scottish Fold", "Sphinx", "American Shorthair","British Shorthair"];
+        const typingDelay = 200;
+        const erasingDelay = 100;
+        const newTextDelay = 2000; // Delay between current and next text
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            }
+            else {
+                cursorSpan.classList.remove("typing");
+                setTimeout(erase, newTextDelay);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+            }
+            else {
+                cursorSpan.classList.remove("typing");
+                textArrayIndex++;
+                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                setTimeout(type, typingDelay + 1100);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
+            if (textArray.length) setTimeout(type, newTextDelay + 250);
+        });
+
+
+
+        
+    </script>
+</body>
+
+</html>
